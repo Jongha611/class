@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 1. div를 기준으로 자손인 span의 색 tomato */
+        div span{
+            color: tomato;
+        }
+
+        /* 2. div를 기준으로 자손인 li의 색 blue */
+        div li{
+            color: blue;
+        }
+
+        /* 3. ol를 기준으로 자식인 span의 색 hotpink */
+        ol>span{
+            color: hotpink;
+        }
+
+        /* 4. li를 기준으로 근접해서 붙어있는 li의 색 green */
+        li+li{
+            color: green;
+        }
+
+        /* 5. 첫 번째 li를 기준으로 형제 관계인 li의 색 lime */
+        li~li{
+            color: lime;
+        }
+
+        /* 6. 두 번째 li를 기준으로 형제를 선택해보자! */
+        li:nth-child(2)~li{
+            color: orange;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <strong>우리 반 규칙!</strong>
+        <ol>
+            <li>지각하지 않기!</li>
+            <li>결석하지 않기!</li>
+            <span>불가피할 땐 민수,하영 쌤에게 꼭 연락하기!</span>
+            <li>복습하기!</li>
+        </ol>
+    </div>
+</body>
+</html>

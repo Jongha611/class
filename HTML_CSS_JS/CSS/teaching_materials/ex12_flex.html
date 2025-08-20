@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        /* flex => 레이아웃을 배치하기 위한 속성 
+            => 단일 구조로는 사용이 불가능! (부모-자식 구조를 가지고 있어야 한다!)
+            - 부모: container
+            - 자식: item
+
+            부모/자식을 정하는 기준
+            - 부모: flex의 영향을 받는 공간
+                => 자식을 포함하고 있는 부모
+            - 자식: 공간 내에서 설정된 속성에 따라 배치가 바뀌는 요소
+                => 내가 배치를 움직이고 싶은 요소
+        */
+
+        .container{
+            background-color: gray;
+            height: 500px;
+            /* flex 사용을 위한 시작점! */
+            display: flex;
+
+            /* 배치의 방향 설정 => row, column, row/column-reverse */
+            flex-direction: row;
+
+            /* 줄넘김 처리 => nowrap(넘김x), wrap(넘김o), wrap-reverse(역방향으로 넘기기) */
+            flex-wrap: nowrap;
+
+            /* 메인축을 사용한 배치(justify) => flex-start, center, flex-end,
+                space-evenly, space-between, space-around */
+            justify-content: center;
+
+            /* 서브축을 사용한 배치 */
+            align-items: flex-end;
+        }
+
+        .item{
+            background-color: skyblue;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+
+            flex-basis: 10%;
+        }
+
+        #selection2, selection3{
+            flex-basis: 30%;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="selection1"></div>
+        <div class="item" id="selection2"></div>
+        <div class="item" id="selection3"></div>
+    </div>
+</body>
+</html>

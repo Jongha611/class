@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .section1{
+            background-color: cornflowerblue;
+        }
+
+        .section2{
+            background-color: coral;
+            width: 100px;
+            height: 100px;
+            /* px과 달리 %의 경우 현재 브라우저의 크기를 기준으로 비율적으로 크기를 지정하는 단위! */
+        }
+
+        /* display 속성 활용하기 */
+        p{
+            /* p태그의 기본 display는 block */
+            background-color: bisque;
+            display: inline;
+        }
+
+        span{
+            /* span태그의 기본 display는 inline */
+            background-color: burlywood;
+            display: block;
+        }
+
+        p, span{
+            width: 100px;
+            height: 100px;
+        }
+        /* 1. inline: 내가 담은 콘텐츠 크기만큼만 나의 크기로 지정하므로 추가적인 크기 설정이 불가능하다! */
+        /* 2. block: 무조건 가로 한줄의 영역을 가질 수 있는 속성 */
+    </style>
+</head>
+<body>
+    <div class="section1">div 영역 1</div>
+    <div class="section2">div 영역 2</div>
+
+    <p>p 태그</p>
+    <p>p 태그</p>
+    <p>p 태그</p>
+
+    <span>span 태그</span> <span>span 태그</span> <span>span 태그</span>
+</body>
+</html>

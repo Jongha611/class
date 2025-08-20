@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        div>div{
+            width: 100px;
+            height: 100px;
+        }
+
+        #static{
+            background-color: olivedrab;
+            position: static;
+            left: 10px;
+            /* 위치에 대한 속성값이 비활성화 되어 있으므로
+               원하는 위치를 줄 수 없다! */
+            /* bottom: 100px; */
+            /* static(정적인) => position 기본 속성값 */
+            /* 배치: 태그가 생성되는 순서대로 쌓이는 구조 */
+        }
+
+        #relative{
+            background-color: violet;
+            position: relative;
+            top: 30px;
+            left: 50px;
+
+            /* relative(상대적인) => 설정하는 대로 위치가 변하는 구조 */
+        }
+
+        /* 내가 포함되어 있는 부모의 요소와 함께 사용되는 편! */
+        /* 나의 부모가 position:static 이라면 위치값을 지정하는 의미가 없다 */
+        #parents{
+            position: relative;
+        }
+
+        #absolute{
+            background-color: coral;
+            position: absolute;
+            top: 50px;
+
+            /* absolute(절대적) => 부모가 static/relative 인지에 따라 나의 배치가 바뀌는 요소! */
+        }
+
+        #fixed{
+            background-color: cornflowerblue;
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+
+            /* fixed(고정된) => 화면에 위치를 고정하여 배치하는 속성! */
+        }
+
+    </style>
+
+    
+
+</head>
+<body>
+    body 영역
+
+    <div id="parents">
+        부모 영역
+        <div id="static">static</div>
+        <div id="relative">relative</div>
+        <div id="absolute">absolute</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div id="fixed"><a href="#static">상단으로 이동</a></div>
+        
+    </div>
+</body>
+</html>

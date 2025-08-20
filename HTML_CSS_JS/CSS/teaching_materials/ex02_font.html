@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 웹 폰트 사용시 폰트를 연결하기 위한 @font-face 내용은 가장 상단에 연결하여 사용!
+        */
+        @font-face {
+            font-family: 'Cafe24Ssurround';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        p{
+            /* 폰트는 여러개를 나열하여 우선순위에 따라 사용할 수 있다!
+                => 유사한 스타일의 글꼴들로 정렬!
+            */
+            font-family: 'Cafe24Ssurround', '궁서체', 'Pretendard'; 
+            font-size: 30px;
+            font-weight: 100;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+
+    <p>이번주 4일만 버티자...!</p>
+    <span>이번주 4일만 버티자...!</span>
+
+</body>
+</html>

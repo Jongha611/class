@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        @font-face {
+            font-family: 'Cafe24Ssurround';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* 1. 전체선택자(*): 모든 태그들을 선택하는 선택자 */
+        *{
+            font-family: 'Cafe24Ssurround';
+            color: skyblue;
+        }
+
+        /* 2. 태그선택자: 특정 태그를 선택하여 사용하는 선택자 */
+        li{
+            color: burlywood;
+        }
+
+        /* 3. 클래스선택자(.): 중복하여 사용할 수 있는 태그 
+            => 글꼴, 버튼, 레이아웃 
+        */
+        .lunch{
+            color: brown;
+        }
+
+        /* 4. 아이디선택자(#): 중복되지 않고 한번만 사용되는 태그
+            => 로고, 검색창, 상단바 
+        */
+        #pick2{
+            background-color: black;
+        }
+
+        /* 선택자는 우선순위가 존재함!
+            => CSS가 단계적으로 디자인을 입력하더라도 우선순위를 따져가며 작업한다!
+            => 전체(0) < 태그(1) < 클래스(10) < 아이디 (100) < !important(최강자)
+        */
+
+        /* 만약, 전체를 컨트롤해야 한다면, !important 사용!
+        1. 전체선택자(*): 모든 태그들을 선택하는 선택자 */
+        *{
+            font-family: 'Cafe24Ssurround';
+            color: skyblue !important;
+        }
+
+        /* 계층 선택자
+        - 자손 선택자       띄어쓰기     에이브라함 바트       
+        - 자식 선택자          >          호머 > 바트
+        - 후행 선택자          ~          바트 ~ 메기
+        - 근접후행 선택자       +          바트 + 리사
+        */
+
+    </style>
+
+</head>
+<body>
+
+    <h1>CSS</h1>
+
+    <p>웹페이즈를 꾸며지누는 스타일 시트 언어</p>
+
+    <ul>
+        <li>css 기본구조</li>
+        <li>css 선택자</li>
+        <li>css 스타일</li>
+    </ul>
+
+    <h1 class='lunch'>오늘 뭐먹지?</h1>
+
+    <ul>
+        <li class="lunch">카라멜 푸딩</li>
+        <li class="lunch">달콤쌉쌀한 푸딩</li>
+        <li class="lunch">탱글탱글한 푸딩</li>
+    </ul>
+
+</body>
+</html>

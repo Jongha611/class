@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            /* width: 500; */
+            border: 20px solid gray;
+            padding: 20px;
+        }
+        /* box-sizing: 요소의 크기를 화면에 표현하기 위한 속성
+            1. content-box: (기본값)
+            => 내가 설정한 크기를 content의 크기로 지정하여 사용하는 요소
+            => 해당 컨텐츠에 margin, border, padding 등의 크기를 추가한다면
+                나의 컨텐츠 므기는 그대로 유지하며, 추가적인 크기가 생성되는것!
+                
+            2. border-box
+            => 내가 설정한 크기가 컨텐츠를 포함한 border, padding, margin까지가 되는 것!
+            => 내가 지정한 크기 안에 모든 요소들이 크기를 나눠갖는 요소!
+        */
+
+        .cb{
+            box-sizing: content-box;
+            width: 300px;
+        }
+
+        .bb{
+            box-sizing: border-box;
+            width: 300px;
+
+            /* 둥근 모서리 
+                - border-radius: 전체방향으로 작업
+                - border-top/bottom-left/right-radius:
+                  원하는 방향에만 둥글기 작업
+            */
+            border-bottom-right-radius: 20px;
+        }
+        /* 실제로 디자인 할때는 보더 박스를 더 많이 쓴다고 함 */
+    </style>
+</head>
+<body>
+
+    <div class='cb'>
+        <p>content-box</p>
+    </div>
+
+    <div class="bb">
+        <p>border-box</p>
+    </div>
+
+</body>
+</html>
