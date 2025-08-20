@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 웹은 디자인, 구조 데이터 전달 기능! -->
+    <!-- 
+        form: 정보를 전달하기 위한 태그
+        - 필수 작성 요소
+            - action(정보의 도착지)
+            - method(정보 전달의 방식) => get(기본)/post
+                => get: url에 전달하는 데이터를 표시하는 방법
+                => post: 눈에 보이지 않는 형태로 감춰서 전달하는 방법
+            - submit(정보를 보내고자 하는 시점)
+    -->
+    <!-- 속성 정리!
+         - placeholder: 입력값의 설명을 추가하기 위한 속성
+         - value: 기본 값 설정
+         - readonly: 입력이 불가능 한, 읽기만 되는 기능
+    -->
+    <form action="#" method='get'>
+        <h4>기본정보 입력</h4>
+        ID: <input type="text" name="id" placeholder="example@naver.com"><br>
+        PW: <input type="password" name='pw'><br>
+        주소: <input type="text" name="address" value="광주 동구" readonly><br>
+
+        <h4>취미 선택하기</h4>
+        <!-- checkbox를 사용하는 경우에는 데이터 전달을 위한 name의 값은 동일해야 한다!
+        -->
+        영화보기<input type="checkbox" name="hobby"><br>
+        산책하기<input type="checkbox" name="hobby"><br>
+        카페가기<input type="checkbox" name="hobby"><br>
+
+        <h4>성별</h4>
+        남성<input type="radio" name="gender"><br>
+        여성<input type="radio" name="gender"><br><br>
+        <!-- checkbox: 중복선택이 가능하다
+             radio: 중복선택이 불가능하다
+        -->
+        
+        <h4>직업 선택</h4>
+        <select name="job">
+            <option>직장인</option>
+            <option>학생</option>
+            <option>취준생</option>
+        </select>
+
+        <h4>그 외 종류</h4>
+        <input type="file"><br>
+        <input type="color"><br>
+        <input type="number"><br>
+        <input type="range"><br>
+        <input type="date"><br>
+        <input type="datetime-local"><br><br>
+
+        <!-- 데이터 전달을 위한 버튼 -->
+        <input type="submit" value="회원가입">
+        <input type="reset">
+
+    </form>
+</body>
+</html>

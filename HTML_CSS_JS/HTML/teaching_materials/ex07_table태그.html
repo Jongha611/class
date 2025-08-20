@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 테이블 삽입을 위한 영역을 지정!
+         테이블 테두리 생성 => border = '1'
+    -->
+    <table border = '1' bordercolor = 'blue'>
+        <!-- 테이블의 제목을 생성 -->
+        <caption> 숫자표 만들기 </caption>
+
+        <!-- th => table head => 컬럼의 제목을 붙이는 태그 -->
+        <!-- 
+            테이블 병합을 위한 속성!
+            - rowspan: 위, 아래 방향으로 병합
+            - colspan: 좌, 우 방향으로 병합
+        -->
+        <tr>
+            <th colspan = '4'>제목1</th>
+            <th>제목2</th>
+            <th>제목3</th>
+            <th>제목4</th>
+        </tr>
+
+        <tr> <!-- td => table row => 테이블 내 몇줄(행)을 생성할 것인지 지정! -->
+            <td bgcolor = 'yellow'>1</td> <!-- td => table data => 테이블에 데이터를 작성하기 -->
+            <td>2</td>
+            <td>3</td>
+            <td rowspan = '2'>4 <br> 8</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+    </table>
+</body>
+</html>
