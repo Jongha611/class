@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let a= 10;
+
+        // 하나의 셀 안에서 일어나는 일로 보면 a는 계속 바뀐채로 유지된다
+        console.log(--a); // 연산자의 위치가 앞에 있으므로 -1을 한 값을 보여줌 (9)
+        console.log(a++); // 연산자의 위치가 뒤에 있으므로 우선 a를 보여준 후 (9) +1을 내부적으로 함 (10)
+        console.log(a); // (10)
+
+        let b = a++ + 5; // (15)
+        console.log(b, a); // (11)
+
+
+        console.log('==비교연산자==');
+        // [==], [!=] => 느슨한 동등 비교 연산자 (자료형은 달라도 형태만 같으면 같다!)
+        // [===], [!==] => 엄격한 동등 비교 연산자 (자료형 까지 같아야 같다!)
+
+        // 자동형변환 (String => Number)
+        console.log(3 == '3'); // true
+        console.log(3 === '3'); // false
+
+        console.log(0 == null); // false
+        console.log(0 === null); // false
+
+        // null, undefined => 특수유형 => 비교시에 자동형변환을 해주지 않음
+        console.log(null == undefined); // true
+        console.log(null === undefined); // false
+
+        // 'a' => 10진수/16진수 => 0, 1
+        // 유니코드 'a' => 97 / 'b' => 98
+        console.log('a' < 'b'); // true
+        console.log('a' > 'b'); // false
+
+        console.log('apple' < 'banana'); // true
+        // 사전 찾기    
+
+    </script>
+    
+</body>
+</html>

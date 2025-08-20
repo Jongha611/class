@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let j = prompt('자바 점수')
+        let p = prompt('파이썬 점수')
+        let r = prompt('R 점수')
+
+        let total_score = Number(j) + Number(p) + Number(r)
+
+        let average = total_score/3
+
+        console.log(average)
+
+        if(average >= 90){
+            console.log('A등급');
+        }else if(average >= 80){
+            console.log('B등급');
+        }else if(average >= 70){
+            console.log('C등급')
+        }else{
+            console.log('F등급')
+        }
+
+        console.log(`당신의 평균은 ${avgScore}이고 학점은 ${grade}입니다.`) // ''아님 ``임
+    </script>
+</body>
+</html>

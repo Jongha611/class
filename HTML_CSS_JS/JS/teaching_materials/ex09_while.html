@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1~5 출력
+        // 1) while
+        let num = 0;
+
+        while(num < 5){
+            num++;
+            console.log(num)
+        }
+
+        // 2) do~while: 무조건 한번은 설행하고 그 이후에 참일 경우에만 반복
+        let num1 = 0;
+        do{ // 실행하고 싶은 코드 {}
+            num1++;
+            console.log(num1);
+        }while(num1 < 5);
+
+        // 3) 비밀번호를 입력받아서 틀리면 계속 입력하고 맞으면 종료
+        let input; // 입력한 비밀번호
+        let correctPassword = '1234'; // 실제 비밀번호
+
+        do{
+            input = prompt('비밀번호를 입력하세요');
+        }while(input =! correctPassword);
+    </script>
+</body>
+</html>

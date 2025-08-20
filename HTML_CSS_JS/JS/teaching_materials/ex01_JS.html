@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id='heading'>글씨를 클릭하면 색깔을 빨갛게 바꾸기!</h1>
+
+    <script>
+        //html 문서 내에 js 코드를 작성할 수 있는 영역
+
+        let h1 = document.querySelector('#heading');
+
+        h1.onclick = function(){
+            h1.style.color = 'red';
+        }
+    </script>
+</body>
+</html>

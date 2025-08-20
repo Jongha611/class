@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum1(num){ //5
+            let sum = 0;
+            for(let i=1; i<=num; i++){
+                sum += i;
+            }
+            return sum;
+        }
+
+        let sum2 = function(num){
+            let sum = 0;
+            for(let i=1; i<=num; i++){
+                sum += i;
+            }
+            return sum;
+        }
+
+        let sum3 = num =>{
+            let sum = 0;
+            for(let i=1; i<=num; i++){
+                sum += i;
+            }
+            return sum;
+        }
+
+        let input = Number(prompt('숫자 입력'));
+        document.write('함수선언문 결과: ' + sum1(input) + '<br>');
+        document.write('함수표현식 결과: ' + sum2(input) + '<br>');
+        document.write(`화살표함수 결과: ${sum3(input)}`);
+
+    </script>
+</body>
+</html>

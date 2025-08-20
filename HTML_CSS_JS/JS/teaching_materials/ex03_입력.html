@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <input type='text' id="name">
+        <!-- 버튼을 클릭했을 때 clickFn() 함수를 호출 -->
+        <input type='button' value="이름 입력" onclick="clickFn()">
+    </form>
+
+    <script>
+        //3. form 태그
+        let clickFn = function(){
+            let name = document.querySelector('#name').value;
+            console.log(name);
+        }
+
+        //4. key 이벤트 (키보드 입력 키 이벤트)
+        //이벤트 리스너: 이벤트가 발생하는지 듣고 있는 도구
+        document.addEventListener('keydown', function(event){
+            //event: 발생한 이벤트에 대한 정보
+            //console.log(event);
+            if(event.key == 'ArrowUp'){
+                console.log('위 방향키가 눌렸습니다!');
+            }
+        });
+
+        //1. 확인창(confirm)
+        //let choice = confirm('정말 탈퇴하시겠어요?');
+        //확인(예=>true)/취소(아니오=>false)
+        //결과값: boolean(논리)
+        //alert(choice);
+
+        // 2. 프롬프트 창(prompt)
+        //let input = prompt('이름을 입력하세요'); //질문
+        //let input = prompt('이름을 입력하세요', '홍길동'); //질문 + 기본답변
+        //결과값: String(문자열)
+        //console.log(input);
+    </script>
+</body>
+</html>

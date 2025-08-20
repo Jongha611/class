@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>이벤트 실습 페이지</h2>
+
+    <!-- 마우스 이벤트 -->
+    <button id="btn">클릭해봐!</button>
+    <div id="mouseArea">마우스를 올려보세요</div>
+
+    <!-- 키보드 이벤트 -->
+    <input id="input" placeholder="키를 눌러보세요"/>
+
+    <!-- 폼 이벤트 -->
+    <form id="myForm">
+        <input type="text" placeholder="이름 입력"/>
+        <button type="submit">제출</button>
+    </form>
+
+    <script>
+
+        // 버튼 클릭 => 알림창
+        // DOM(Document Object Model)
+        document.getElementById('btn');
+        btn.addEventListener('click', () => {alert('버튼 클릭됨!')});
+
+        let mouseArea = document.getElementById('mouseArea');
+        mouseArea.addEventListener('mouseover', () => {mouseArea.style.backgroundColor = 'yellow'});
+        mouseArea.addEventListener('mouseout', () => {mouseArea.style.backgroundColor = 'lightblue'});
+
+        // 키보드 이벤트
+
+        let input = document.getElementById('input');
+        input.addEventListener('keydown', (event) => {console.log('눌린 키: ' + event.key)});
+
+        // 폼 이벤트
+        let form = document.getElementById('myForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // 제출되는 것을 일단 막음!
+            // 회원가입 양식
+            // 1. 아이디 => 특정 양식에 맞춰 작성
+            // 2. 비밀번호 => 대문자 소문자 섞어서 했는지 등
+            // 3. 이름 => 비워놓지 않았는지
+            // => preventDefault를 호출하지 않으면 위 조건들을 확인하지 않고 그냥 무조건 제출(회원가입 시도)
+            alert('폼이제출됨!');
+        });
+
+    </script>
+
+</body>
+</html>

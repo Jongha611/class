@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 1 => 월요일 / 2 => 화요일 / 3 => 수요일 / 7 => 일요일
+        let day = '10';
+
+        // if vs switch
+        // if => 비교연산 => 연산 횟수가 많지 않은 경우(3번 이하) 연산이 복잡하지 않음
+        // switch => jump연산 => 연산 횟수가 적음
+        // ~~> 비교연산이 3번 이하인 경우에는 if / 그 이상인 경우에는 switch
+
+        // if(day == '1')
+        switch(day){
+            case '1':
+                console.log('월요일');
+                break;
+            case '2':
+                console.log('화요일');
+                break;
+            case '3':
+                console.log('수요일');
+                break;
+            case '4':
+                console.log('목요일');
+                break;
+            case '5':
+                console.log('금요일');
+                break;
+            case '6':
+                console.log('토요일');
+                break;
+            case '7':
+                console.log('일요일');
+                break;
+            default:
+                console.log('다시 입력하세요');
+        }
+
+        let month = 1; // 1~12 (12, 1, 2: 겨울, 3, 4, 5: 봄, 6, 7, 8: 여름, 9, 10, 11: 가을 )
+        switch(1){
+            case 12:
+            case 1:
+            case 2:
+                console.log('겨울');
+                break;
+            case 3:
+            case 4:                
+            case 5:
+                console.log('봄');
+                break;
+            case 6:                
+            case 7:                
+            case 8:
+                console.log('여름');
+                break;
+            case 9:                
+            case 10:                
+            case 11:
+                console.log('가을');
+                break;
+            default:
+                console.log('다시 입력하세요');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //(function(){
+        //    let userName = prompt('이름을 입력하세요');
+        //    document.write('사용자 이름: ' + userName);
+        //}());
+
+        // 즉시 실행함수: 페이지가 로드되면 처음에 한번 실행하는 코드를 정의
+        // 인자를 전달해서 처음에 바로 계산하고 싶을 때
+        // 초기화 코드
+        (function(a, b){
+            alert(a + b);
+        }(10, 20));
+    </script>
+</body>
+</html>

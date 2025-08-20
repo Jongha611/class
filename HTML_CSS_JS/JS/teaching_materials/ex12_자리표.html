@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./ex12_자리표.css">
+</head>
+<body>
+    <script>
+        let memCnt = Number(prompt('입장객은 몇 명 인가요?'));
+        let colCnt = Number(prompt('한 줄에 몇 명씩 앉을까요?'));
+
+        //행 수(몇 줄)
+        //32명/5명씩 => 6줄+1줄 => 7줄
+        //30명/5명씩 => 6줄
+        let rowCnt; //몇 줄
+        if(memCnt % colCnt != 0){ //나머지가 있을 경우
+            //js => / => 나누기연산 (나누어 떨어지지않는 경우 ~> 실수)
+            //소수점 없애는법 : Math.floor() / parseInt()
+            rowCnt = parseInt(memCnt/colCnt + 1);
+        }else{ //memCnt % colCnt == 0
+            rowCnt = memCnt/colCnt;
+        }
+        console.log(rowCnt);
+
+        //console.log(Math.floor(3.14)); 3
+        //console.log(parseInt(3.14)); 3
+        //console.log(Math.floor(-3.14)); -4
+        //console.log(parseInt(-3.14)); -3
+
+        let count = 1;
+        //표 출력 (document)
+        document.write('<table border=1>');
+        for(let i=1; i<=rowCnt; i++){
+            document.write('<tr>');
+            for(let j=1; j<=colCnt; j++){
+                if(count <= memCnt){
+                    document.write('<td>');
+                    document.write('좌석 '+ count++);
+                    document.write('</td>');
+                } 
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+
+    </script>
+    
+</body>
+</html>

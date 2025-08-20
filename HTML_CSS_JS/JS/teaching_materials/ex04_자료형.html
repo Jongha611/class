@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //1. 숫자(Numner): 정수, 실수 구분없이 (엔진이 실제 계산시에는 구분함!)
+        // let, const.. 키워드를 작성하면 새로운 변수/상수가 만들어짐
+        // => 값을 저장할 수 있는 새로운 공간(메모리) 생성
+        let num1 = 10;
+        let num2 = 3.14;
+        console.log(num1);
+
+        num1 = 20; //기존에 만들어진 변수 중 num1에 값을 20으로 재할당
+        console.log(num1);
+
+        const num4 = 10;
+        console.log(num4);
+
+        let num3 = 832561834756189374556245n;
+        console.log(num3);
+
+        //2. 문자열(string) => '', ""
+        // => 너무 혼용해서 쓰는것은 지양
+        let str1 = '문자열 표현';
+        let str2 = '문자열 표현';
+
+        // 문자열 끼리 혹은 문자열과 변수를 이어주는 방법
+        // 1) + 연산활용1
+        //let todayWeather = prompt('오늘 날씨는?'); //결과값 => string
+        //console.log('오늘 날씨는 => ' + todayWeather);
+
+        // 2) 템플릿 리터럴 활용
+        //console.log(`오늘 날씨는 => ${todayWeather}`);
+
+        //3. boolean(논리형) => true/false
+        let isEmpty = true;
+
+        console.log(typeof(isEmpty));
+        console.log(typeof(num1));
+
+        //undefined / null
+        //undefined: 값이 정의가 안된 상태
+        let test1;
+        let test2 = null;
+
+        console.log(test1 + 1); //NaN: Not a Number => 에러의 일종
+        console.log(test2 + 1); //자바에서는 null에 1을 더하는 것을 허용한다(자동형변환 덕분)
+    </script>    
+</body>
+</html>
